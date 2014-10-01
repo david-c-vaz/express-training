@@ -7,6 +7,6 @@ exports.about=function(req,response){
 }
 
 exports.test=function(req,response){
-  response.redirect('/home');
+  response.status(200).send("Path : "+req.custom_path+" &  QueryString : "+req.queryString);
 }
 
