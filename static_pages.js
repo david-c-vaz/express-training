@@ -7,7 +7,6 @@ exports.about=function(req,response){
 }
 
 exports.test=function(req,response){
-//  response.status(200).send('HostName '+req.hostname+":"+server.address().port);
-  response.status(200).send('test');
+  response.redirect('/home');
 }
 

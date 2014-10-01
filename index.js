@@ -1,12 +1,8 @@
 var express = require('express');
+var handler=require('./handler');
 var app = express();
-var validator = require('./validation');
-var pages = require('./static_pages');
 
-app.get('/test',pages.test );
-
-app.get('/home', pages.home);
-app.get('/about', pages.about);
+app.use(handler.router);
 
 var server=app.listen(3000,function(){
   console.log('This application uses port %d', server.address().port)
